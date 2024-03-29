@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krispy cream donut</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.scss">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script>
+        window.onload = () => {
+            let cont = document.querySelector('.krispy_menu');
+            let menu = document.querySelectorAll('.tab_menu li');
+            let list = document.querySelectorAll('.mySwiper');
+
+            for(let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener('click', () => {
+                    //alert(i);
+
+                    //li 즉 변수명 menu한테 클래스명 on이 붙고 떨어짐
+                    menu.forEach((menuWrap) => {
+                        menuWrap.classList.remove('on');
+                    });
+
+                    menu[i].classList.add('on');
+
+                    list.forEach((itemWrap) => {
+                        //forEach = 배열함수
+                        //itemWrap(변수이름, 변경가능) = list[0], list[1], list[2];
+                        itemWrap.classList.remove('on');
+                    });
+
+                    list[i].classList.add('on');
+                });
+            };
+
+            //버튼눌렀을때 색깔유지
+            var menuLinks = document.querySelectorAll('.menu-link');
+
+            function clickMenuHandler() {
+                for (var i = 0; i < menuLinks.length; i++) {
+                    menuLinks[i].classList.remove('menu-active');
+                }
+                this.classList.add('menu-active');
+            }
+
+            for (var i = 0; i < menuLinks.length; i++) {
+                menuLinks[i].addEventListener('click', clickMenuHandler);
+            }
+
+            
+        }; //script end
+    </script>
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header" id="header">
+            <div class="inner">
+                <nav class="pc pc_gnb">
+                    <ul class="gnb">
+                        <li class="depth01">
+                            <a href="#">베스트</a>
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">이벤트</a>
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">도넛</a>
+                            <ul class="depth02">
+                                <li><a href="#">도넛 더즌</a></li>
+                                <li><a href="#">도넛 단품</a></li>
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">음료</a>
+                            <ul class="depth02">
+                                <li><a href="#">커피</a></li>
+                                <li><a href="#">음료</a></li>
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                    </ul> <!-- .gnb end -->
+                </nav> <!-- .pc_gnb end -->
+
+                <h1 class="logo"><a href="#">
+                        <img src="img/kkd_logo.png" alt="">
+                    </a></h1>
+
+                <div class="util_wrap">
+                    <div class="search">
+                        <input type="text">
+                        <img src="img/icon_search_white.png" alt="search">
+                    </div> <!-- search end -->
+
+                    <div class="util">
+                        <a href="#"><img src="img/Icon_box.png" alt="box"></a>
+                        <a href="#"><img src="img/Icon_login.png" alt="login"></a>
+                    </div> <!-- .util end -->
+                </div> <!-- .util_wrap end -->
+            </div> <!-- .inner end -->
+        </header> <!-- .header end -->
+
+        <main id="main">
+            <section class="main_visual">
+                <img class="pc" src="img/wave.png" alt="wave">
+                <div class="main_bg">
+                    <div class="text_wrap">
+                        <h1>ORIGINAL<br>GLAZED</h1>
+                        <h5>부드럽고 달콤한 오리지널 <br class="mobile-390">글레이즈드 도넛을<br class="mobile-1400"> 전국에서 즐겨보세요!</h5>
+                        <div class="main_button">
+                            <a href="#">
+                                <p>자세히 보기</p>
+                                <figure>
+                                    <img src="img/Icon_arrow.png" alt="arrow">
+                                </figure>
+
+                            </a>
+                        </div> <!-- .main_button -->
+                    </div> <!-- .text_wrap end -->
+
+                    <div class="main_donut">
+                        <figure>
+                            <img src="img/donut_group.png" alt="">
+                        </figure>
+                    </div>
+                </div> <!-- .main_bg end -->
+
+            </section> <!-- .main_visual end -->
+
+            <section class="promotion">
+                <div class="inner">
+                    <div class="item_wrap">
+                        <div class="item_app">
+                            <div class="text">
+                                <h2>내 손 안에 <br class="mobile-1500">크리스피</h2>
+                                <p>휴대폰으로 지금 바로<br>크리스피 도넛을 시켜보세요!</p>
+
+                                <div class="button">
+                                    <a href="#">
+                                        <p>앱 다운로드</p>
+                                    </a>
+                                </div> <!-- .button end -->
+                            </div> <!-- .text -->
+
+                            <div class="app_img">
+                                <figure>
+                                    <img src="img/phone3d.png" alt="phone">
+                                </figure>
+                            </div> <!-- app_img end -->
+                        </div> <!-- .item_app end-->
+
+                        <div class="item_store">
+                            <div class="text">
+                                <h2>주변 매장 <br class="mobile-1500">찾기</h2>
+                                <p>주변의 매장에 방문하여<br>갓 나온 도넛을 맛보세요!</p>
+
+                                <div class="search">
+                                    <input type="text" placeholder="지역을 입력하세요">
+                                    <img src="img/Icon_search.png" alt="search">
+                                </div> <!-- .search end -->
+                            </div> <!-- .text end -->
+
+                            <div class="store_img">
+                                <figure>
+                                    <img src="img/donut_3d.png" alt="donut_3d">
+                                </figure>
+                            </div> <!-- app_img end -->
+                        </div> <!-- .item_store end -->
+                    </div> <!-- .item_wrap  -->
+                </div> <!-- .inner end -->
+            </section> <!-- .promotion end -->
+
+            <section class="quick">
+                <div class="inner">
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/icon_donut2.png" alt="donut2">
+                            </figure>
+                            <p>도넛 <br class="mobile-390">더즌</p>
+                        </a>
+
+                    </div> <!-- .item end -->
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/icon_donut.png" alt="donut">
+                            </figure>
+                            <p>도넛 <br class="mobile-390">단품</p>
+                        </a>
+
+                    </div> <!-- .item end -->
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/icon_coffee.png" alt="coffee">
+                            </figure>
+                            <p>커피</p>
+                        </a>
+
+                    </div> <!-- .item end -->
+                    <div class="item">
+                        <a href="#">
+                            <figure>
+                                <img src="img/icon_drink.png" alt="drink">
+                            </figure>
+                            <p>음료</p>
+                        </a>
+
+                    </div> <!-- .item end -->
+                </div> <!-- .inner end -->
+            </section> <!-- quick end -->
+
+            <section class="krispy_menu">
+                <div class="inner">
+                    <h3>KRISPY MENU</h3>
+                    <div class="item_wrap">
+                        <ul class="tab_menu">
+                            <li class="on"><a href='javascript:void(0);' class="menu-link">BEST MENU</a></li>
+                            <li><a href='javascript:void(0);' class="menu-link">EVENT MENU</a></li>
+                        </ul> <!-- tab_menu end -->
+
+                            <div class="mySwiper_wrap">
+                                <div class="swiper mySwiper on">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <img src="img/donut1.png" alt="donut">
+                                        <div class="text">
+                                            <a href="#"><p>오리지널 <br class="mobile-960">글레이즈드 <br class="mobile-960">더즌</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/donut22.PNG" alt="donut">
+                                        <div class="text">
+                                            <a href="#"><p>오리지널 <br class="mobile-960">글레이즈드 <br class="mobile-960">하프 더즌</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/donut3.png" alt="donut">
+                                        <div class="text">
+                                            <a href="#"><p>오리지널 <br class="mobile-960">글레이즈드</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/drink1.png" alt="drink">
+                                        <div class="text">
+                                            <a href="#"><p>자몽 <br class="mobile-960">블랙티</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/drink22.PNG" alt="drink">
+                                        <div class="text">
+                                            <a href="#"><p>스트로베리 <br class="mobile-960">스무디</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                  </div> <!-- myswiper -->
+                            </div> <!-- mySwiper_wrap end -->
+
+                            <div class="mySwiper_wrap">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide">
+                                        <img src="img/haribo1.png" alt="haribo">
+                                        <div class="text">
+                                            <a href="#"><p>하리보랜드 <br class="mobile-960">더즌</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/haribo2.png" alt="haribo">
+                                        <div class="text">
+                                            <a href="#"><p>하리보랜드 <br class="mobile-960">하프 더즌</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/haribo3.png" alt="haribo">
+                                        <div class="text">
+                                            <a href="#"><p>웰컴 <br class="mobile-960">골든베어</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/haribo4.png" alt="haribo">
+                                        <div class="text">
+                                            <a href="#"><p>하리보 <br class="mobile-960">매직쇼</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                      <div class="swiper-slide">
+                                        <img src="img/haribo5.png" alt="haribo5">
+                                        <div class="text">
+                                            <a href="#"><p>하리보 <br class="mobile-960">랜드마크</p></a>
+                                        </div> <!-- text end -->
+                                      </div> <!-- swiper-slide end -->
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                  </div> <!-- myswiper -->
+                            </div> <!-- mySwiper_wrap end -->
+                    </div>
+
+                </div> <!-- .inner end -->
+            </section> <!-- krispy_menu -->
+
+            <section class="machine">
+                <div class="inner">
+
+                </div> <!-- .inner end -->
+            </section> <!-- machine end -->
+        </main> <!-- .main end -->
+    </div> <!-- wrap end -->
+
+    <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+
+      slidesPerView: 3,
+      spaceBetween: 30,
+
+ breakpoints: {
+
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+
+    1100: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    },
+
+    1300: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  }
+
+    });
+  </script>
+</body>
+
+</html>
