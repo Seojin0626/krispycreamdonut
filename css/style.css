@@ -142,6 +142,7 @@ html, body {
   border: 0;
   background-color: #35935F;
   padding: 0 10px;
+  color: white;
 }
 .header .inner .util_wrap .search img {
   position: absolute;
@@ -189,9 +190,11 @@ html, body {
   color: #fff;
 }
 .main_visual .main_bg .text_wrap h1 {
-  font-size: 80px;
+  font-size: 85px;
   font-weight: 800;
   margin-bottom: 2rem;
+  letter-spacing: 7px;
+  line-height: 1.2;
 }
 .main_visual .main_bg .text_wrap h5 {
   font-size: 2rem;
@@ -376,6 +379,9 @@ html, body {
 }
 .krispy_menu .inner .item_wrap .mySwiper_wrap {
   position: relative;
+}
+.krispy_menu .inner .item_wrap .mySwiper_wrap:last-child {
+  margin-right: 100px;
 }
 .krispy_menu .inner .item_wrap .mySwiper {
   position: static;
@@ -1050,12 +1056,12 @@ html, body {
     gap: 4rem;
   }
   .krispy_menu .inner .item_wrap .mySwiper .swiper-button-next {
-    left: 76%;
-    top: 40%;
+    left: 78%;
+    top: 50%;
   }
   .krispy_menu .inner .item_wrap .mySwiper .swiper-button-prev {
-    left: 25%;
-    top: 40%;
+    left: 21%;
+    top: 50%;
   }
   .krispy_menu .inner .item_wrap .mySwiper .swiper-wrapper .swiper-slide img {
     height: auto;
@@ -1067,6 +1073,9 @@ html, body {
     margin-top: 20px;
     width: 50%;
     margin: 0 auto;
+  }
+  .krispy_menu .inner .item_wrap .mySwiper_wrap:last-child {
+    margin-right: 0;
   }
   .krispy_menu .inner .item_wrap .mySwiper .swiper-wrapper .text {
     background-color: transparent;
@@ -1243,9 +1252,15 @@ html, body {
     left: 19%;
     top: 52%;
   }
+  .swiper-button-prev:after {
+    font-size: 30px;
+  }
   .krispy_menu .inner .item_wrap .mySwiper .swiper-button-next {
     left: 78%;
     top: 52%;
+  }
+  .swiper-button-next:after {
+    font-size: 30px;
   }
   .krispy_menu {
     height: 550px;
