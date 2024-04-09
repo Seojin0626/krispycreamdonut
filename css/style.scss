@@ -134,6 +134,10 @@ html,body {
                     padding-left: 0;
                 }
             } /* gnb end */
+            .gnb .depth01 .depth02 li:hover {
+                color: #106536;
+                font-weight: 500;
+            }
         } /* .pc gnb end */
         .logo {
             img {

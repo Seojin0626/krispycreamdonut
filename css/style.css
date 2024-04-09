@@ -120,6 +120,10 @@ html, body {
 .header .inner .pc_gnb .gnb .depth01:nth-child(1) {
   padding-left: 0;
 }
+.header .inner .pc_gnb .gnb .depth01 .depth02 li:hover {
+  color: #106536;
+  font-weight: 500;
+}
 .header .inner .logo {
   /* img end */
 }
